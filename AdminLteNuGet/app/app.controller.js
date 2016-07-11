@@ -10,3 +10,4 @@ var main;
     main.MainController = MainController;
     angular.module('app').controller('mainController', MainController);
 })(main || (main = {}));
+//# sourceMappingURL=app.controller.js.map
