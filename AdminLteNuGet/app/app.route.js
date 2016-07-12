@@ -3,31 +3,17 @@ var main;
     angular.module('app').config(function ($stateProvider, $urlRouterProvider) {
         //
         // For any unmatched url, redirect to /state1
-        $urlRouterProvider.otherwise("/state1");
+        $urlRouterProvider.otherwise("/home");
         //
         // Now set up the states
         $stateProvider
-            .state('state1', {
-            url: "/state1",
+            .state('home', {
+            url: "/home",
             templateUrl: "app/home/home.html"
         })
-            .state('state1.list', {
-            url: "/list",
-            templateUrl: "partials/state1.list.html",
-            controller: function ($scope) {
-                $scope.items = ["A", "List", "Of", "Items"];
-            }
-        })
-            .state('state2', {
-            url: "/state2",
-            templateUrl: "partials/state2.html"
-        })
-            .state('state2.list', {
-            url: "/list",
-            templateUrl: "partials/state2.list.html",
-            controller: function ($scope) {
-                $scope.things = ["A", "Set", "Of", "Things"];
-            }
+            .state('contacts', {
+            url: "/contacts",
+            templateUrl: "app/contacts/contacts.html"
         });
     });
 })(main || (main = {}));
